@@ -1,5 +1,5 @@
 name: "codeproject AI"
-version: 2023061301
+version: 2023091101
 slug: codeprojectAI
 apparmor: true
 description: "CodeProject.AI Server is a locally installed, self-hosted, fast, free and Open Source Artificial Intelligence server for any platform, any language. No off-device or out of network data transfer, no messing around with dependencies, and able to be used from any platform, any language."
@@ -10,12 +10,14 @@ map:
 url: "https://www.codeproject.com/Articles/5322557/CodeProject-AI-Server-AI-the-easy-way"
 ports:
   32168/tcp: 32168
+  5000/tcp: 5000
 image: codeproject/ai-server:gpu
 init: false
 webui: http://[HOST]:[PORT:32168]
 watchdog: http://[HOST]:[PORT:32168]
 ports_description:
   32168/tcp: "Default port, don't change"
+  5000/tcp: "Default port, don't change"
 video: true
 usb: true
 options:
